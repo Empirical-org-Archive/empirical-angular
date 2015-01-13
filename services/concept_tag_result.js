@@ -1,10 +1,10 @@
 module.exports = 
 
 // Save/retrieve concept tag results from firebase
-['$firebase', 'baseFbUrl', function ConceptTagResult($firebase, baseFbUrl) {
+['$firebase', 'firebaseUrl', function ConceptTagResult($firebase, firebaseUrl) {
   var conceptTagResult = this;
 
-  var resultsRef = new Firebase(baseFbUrl + "/concept_tag_results");
+  var resultsRef = new Firebase(firebaseUrl + "/concept_tag_results");
 
   // Load the list of results from firebase, return a promise that receives
   // the loaded list.
