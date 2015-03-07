@@ -1,6 +1,6 @@
 {
   "name": "empirical-angular",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AngularJS components for Empirical apps",
   "main": "index.js",
   "scripts": {
