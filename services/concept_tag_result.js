@@ -50,4 +50,11 @@ module.exports =
       });
     });
   };
+
+  // Remove concept tags by session id
+  // Users of this service should call this once they have successfully submitted concept results
+  // to the LMS.
+  conceptTagResult.removeBySessionId = function(activitySessionId) {
+    return $firebase(resultsRef).$remove(activitySessionId);
+  };
 }];
