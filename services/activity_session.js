@@ -1,6 +1,6 @@
 module.exports =
 
-['$http', 'empiricalBaseURL', '_', function ActivitySession($http, empiricalBaseURL, _) {
+['$http', 'empiricalBaseURL', function ActivitySession($http, empiricalBaseURL, _) {
   var activitySession = this;
 
   function activitySessionUrl(id) {
@@ -24,7 +24,7 @@ module.exports =
    * request body.
    */
   activitySession.finish = function(sessionId, putData, cb) {
-    putData = _.extend(putData, {state: 'finished'});
+    putData.state = 'finished';
     return update(sessionId, putData).then(function next(response) {
       return response.data.activity_session;
     });
