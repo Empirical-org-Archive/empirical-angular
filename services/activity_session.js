@@ -1,6 +1,6 @@
 module.exports =
 
-['$http', 'empiricalBaseURL', function ActivitySession($http, empiricalBaseURL, _) {
+['$http', 'empiricalBaseURL', function ActivitySession($http, empiricalBaseURL) {
   var activitySession = this;
 
   function activitySessionUrl(id) {
