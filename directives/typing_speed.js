@@ -1,4 +1,4 @@
-module.exports = 
+module.exports =
 
 ['TypingSpeed', '_', function(TypingSpeed, _) {
   return {
@@ -20,8 +20,10 @@ module.exports =
 
       function getWordCount() {
         var text = model.$viewValue;
-        if (text.trim().length) { // Don't count leading/trailing spaces.
-          return text.split(' ').length;
+        if (text) {
+          if (text.trim().length) { // Don't count leading/trailing spaces.
+            return text.split(' ').length;
+          }
         } else {
           return 0;
         }
